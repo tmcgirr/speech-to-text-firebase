@@ -3,6 +3,8 @@ import { addDoc, collection } from "firebase/firestore";
 import { db, auth } from "../firebase-config";
 import { useNavigate } from "react-router-dom";
 
+import { data } from "../../server";
+
 import "./css/styles.css";
 
 function SpeechToText({ isAuth }) {
@@ -54,15 +56,16 @@ function SpeechToText({ isAuth }) {
       }
     } else {
       // const response = await fetch("http://localhost:8000"); // get temp session token from server.js (backend)
-      const port = process.env.PORT || 8000;
-      const response = await fetch(
-        `https://${window.location.hostname}:${port}`
-      ); // get temp session token from server.js (backend)
-      const data = await response.json();
+      // const port = process.env.PORT || 8000;
+      // const response = await fetch(
+      //   `https://${window.location.hostname}:${port}`
+      // ); // get temp session token from server.js (backend)
 
-      if (data.error) {
-        alert(data.error);
-      }
+      // const data = await response.json();
+
+      // if (data.error) {
+      //   alert(data.error);
+      // }
 
       const { token } = data;
 
