@@ -56,16 +56,16 @@ function SpeechToText({ isAuth }) {
       }
     } else {
       // const response = await fetch("http://localhost:8000"); // get temp session token from server.js (backend)
-      // const port = process.env.PORT || 8000;
-      // const response = await fetch(
-      //   `https://${window.location.hostname}:${port}`
-      // ); // get temp session token from server.js (backend)
+      const port = process.env.PORT || 8000;
+      const response = await fetch(
+        `https://${window.location.hostname}:${port}`
+      ); // get temp session token from server.js (backend)
 
-      // const data = await response.json();
+      const data = await response.json();
 
-      // if (data.error) {
-      //   alert(data.error);
-      // }
+      if (data.error) {
+        alert(data.error);
+      }
 
       const { token } = data;
 
