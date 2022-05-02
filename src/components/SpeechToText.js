@@ -53,7 +53,11 @@ function SpeechToText({ isAuth }) {
         console.log("Recorder");
       }
     } else {
-      const response = await fetch("/" || "http://localhost:8000"); // get temp session token from server.js (backend)
+      // const response = await fetch("http://localhost:8000"); // get temp session token from server.js (backend)
+      const port = process.env.PORT || 8000;
+      const response = await fetch(
+        `http://${window.location.hostname}:${port}`
+      ); // get temp session token from server.js (backend)
       const data = await response.json();
 
       if (data.error) {

@@ -13,7 +13,6 @@ app.get("/", async (req, res) => {
       "https://api.assemblyai.com/v2/realtime/token", // use account token to get a temp user token
       { expires_in: 3600 }, // can set a TTL timer in seconds.
       { headers: { authorization: API_KEY } }
-      // { headers: { authorization: process.env.SERVER_API_KEY } }
     );
     const { data } = response;
     res.json(data);
@@ -25,8 +24,7 @@ app.get("/", async (req, res) => {
   }
 });
 
-app.set("port", process.env.PORT || 8000);
-const server = app.listen(app.get("port"), () => {
-  // const server = app.listen(process.env.PORT || 8000, () => {
+const PORT = process.env.PORT || 8000;
+const server = app.listen(PORT, () => {
   console.log(`Server is running on port ${server.address().port}`);
 });

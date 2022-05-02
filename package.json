@@ -36,7 +36,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "node ./js/server.js",
+    "server": "node ./server.js",
     "client": "serve -l 3000"
   },
   "eslintConfig": {
