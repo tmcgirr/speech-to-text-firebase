@@ -3,7 +3,7 @@ import { addDoc, collection } from "firebase/firestore";
 import { db, auth } from "../firebase-config";
 import { useNavigate } from "react-router-dom";
 
-import { data } from "../../server";
+// import { data } from "../../server";
 
 import "./css/styles.css";
 
