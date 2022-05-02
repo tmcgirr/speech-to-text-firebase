@@ -24,7 +24,7 @@ function Register() {
       });
     } catch (err) {
       console.error(err);
-      alert(err.message);
+      alert("Error Attempting To Register");
     }
   };
 
@@ -66,7 +66,11 @@ function Register() {
         </button>
 
         <div>
-          Already have an account? <Link to="/login">Login</Link> now.
+          Already have an account?{" "}
+          <Link className="redirect_link" to="/login">
+            Login
+          </Link>{" "}
+          now.
         </div>
       </div>
     </div>

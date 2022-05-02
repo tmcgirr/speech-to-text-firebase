@@ -7,6 +7,11 @@ app.use(cors());
 
 const API_KEY = "d4a4604322f64eeaab6c95064a29c30c";
 
+const server = app.listen(process.env.PORT || 8000, () => {
+  const port = server.address().port;
+  console.log(`Server is running on port`, port);
+});
+
 app.get("/", async (req, res) => {
   try {
     const response = await axios.post(
@@ -23,15 +28,3 @@ app.get("/", async (req, res) => {
     res.status(status).json(data);
   }
 });
-
-const server = app.listen(process.env.PORT || 8000, () => {
-  const port = server.address().port;
-  console.log(`Server is running on port`, port);
-  //   const response = await fetch(port)
-  //   const data = await response.json();
-  //   if (data.error) {
-  //   alert(data.error);
-  // }
-});
-
-// const response = await fetch(`https://${window.location.hostname}:${port}`); // get temp session token from server.js (backend)

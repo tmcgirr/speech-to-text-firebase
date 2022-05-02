@@ -31,9 +31,9 @@ function App() {
           <>
             <Link to="/">Home</Link>
             <Link to="/CreatePost">Post</Link>
-            <button className="logout_button" onClick={signUserOut}>
+            <Link to="/" onClick={signUserOut}>
               Log Out
-            </button>
+            </Link>
           </>
         )}
       </nav>

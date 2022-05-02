@@ -22,7 +22,7 @@ nav {
 a {
   color: white;
   text-decoration: none;
-  margin: 25px;
+  margin: 10px;
   font-size: 25px;
 }
 
@@ -79,17 +79,4 @@ textarea {
   background-color: #ebebeb;
   box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
   cursor: not-allowed;
-}
-
-.logout_button {
-  display: flex;
-  padding: 0.5em;
-  border-radius: 0.5rem;
-  justify-content: center;
-  cursor: pointer;
-  background: #e2e2e2;
-  color: rgb(0, 0, 0);
-  /* width: 5%; */
-  font-size: 18px;
-  margin-right: 10px;
 }
