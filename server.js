@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const API_KEY = "d4a4604322f64eeaab6c95064a29c30c";
+
 
 const server = app.listen(process.env.PORT || 8000, () => {
   const port = server.address().port;
