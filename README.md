@@ -1,5 +1,8 @@
 #Speech-to-text-firebase
 
+Application created in 3 days for interview.
+Prompt: Create a speech to text application that allowsa user to log in, start a speech to text session, save the session and view past sessions, using any framework for application with preference on React and Firebase. Provided API keys for local testing (**Deactivated**).
+
 # Login Page 
 (Google Auth or Login with Email/Password)
 <img width="795" alt="Login" src="https://user-images.githubusercontent.com/59525360/166199864-7d892017-9dca-466f-a0e1-f2e1a4b78087.png">
